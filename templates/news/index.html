@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>News Home</h1>
+    <p>Welcome to Best news!</p>
+    <ul>
+        <li><strong>redactors:</strong> {{ num_redactors }}</li>
+        <li><strong>newspapers:</strong> {{ num_newspapers }}</li>
+        <li><strong>topics:</strong> {{ num_topics }}</li>
+    </ul>
+
+    <p>
+      You have visited this page {{ num_visits }} time{{ num_visits|pluralize }}.
+    </p>
+
+{% endblock %}
