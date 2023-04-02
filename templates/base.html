@@ -9,6 +9,20 @@
   <link rel="stylesheet" href="{% static 'css/styles.css' %}">
 </head>
 <body>
-  {% block content %}{% endblock %}
+  <div class="columns">
+  <div class="column is-one-quarter">
+    {% block sidebar %}
+      {% include "includes/sidebar.html" %}
+    {% endblock %}
+  </div>
+  <div class="column">
+    {% block content %}{% endblock %}
+  </div>
+
+</div>
+
+
+
+
 </body>
 </html>
