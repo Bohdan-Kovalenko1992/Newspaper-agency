@@ -1,0 +1,16 @@
+	{% extends "base.html" %}
+
+{% block content %}
+  <h1 class="title is-1">Redactors</h1>
+  {% if redactor_list %}
+    <ul>
+      {% for redactor in redactor_list %}
+        <li><a href="#">{{ redactor.username }}</a>
+        ({{ redactor.first_name }} {{ redactor.last_name }}  {{ redactor.years_of_experience }})
+        </li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <span>No redactors</span>
+  {% endif %}
+{% endblock %}

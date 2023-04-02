@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h1 class="title is-1">Newspapers</h1>
+  {% if newspaper_list %}
+    <table class="table">
+      {% for newspaper in newspaper_list %}
+        <td><a href="#">{{ newspaper.title }}</a></td>
+      {% endfor %}
+    </table>>
+  {% else %}
+    <span>No newspapers</span>
+  {% endif %}
+{% endblock %}
