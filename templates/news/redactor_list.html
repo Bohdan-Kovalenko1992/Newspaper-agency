@@ -5,7 +5,7 @@
   {% if redactor_list %}
     <ul>
       {% for redactor in redactor_list %}
-        <li><a href="#">{{ redactor.username }}</a>
+        <li><a href="{{ redactor.get_absolute_url }}">{{ redactor.username }}</a>
         ({{ redactor.first_name }} {{ redactor.last_name }}  {{ redactor.years_of_experience }})
         </li>
       {% endfor %}

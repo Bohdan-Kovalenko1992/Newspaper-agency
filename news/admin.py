@@ -28,7 +28,7 @@ class RedactorAdmin(UserAdmin):
 
 @admin.register(Newspaper)
 class NewspaperAdmin(admin.ModelAdmin):
-    list_display = ["title", "topic", "published_date"]
+    list_display = ["title", "topic", "publication_date"]
     list_filter = ["topic"]
     search_fields = ["title"]
 
