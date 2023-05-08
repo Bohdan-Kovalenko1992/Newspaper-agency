@@ -36,5 +36,8 @@ class Newspaper(models.Model):
 
     redactors = models.ManyToManyField(settings.AUTH_USER_MODEL, related_name="newspapers")
 
+    class Meta:
+        ordering = ["-publication_date"]
+
     def __str__(self):
         return f"{self.title}"
